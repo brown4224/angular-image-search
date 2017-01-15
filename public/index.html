@@ -20,14 +20,17 @@
     <script src="./js/socketFunctions.js"></script>
     <script src="./js/controller.js"></script>
 </head>
+
 <body ng-app="myApp" ng-controller="image-area">
 <div class="container">
+
     <input ng-model="imgSearch" class="form-control" placeholder="Image Search">
     <div class="jumbotron" >
-        <div ng-repeat="img in images | filter: imgSearch" ">
-        <img ng-src="http://localhost:3000/images/{{img}}" class="image-zone">
+        <div ng-repeat="imgName in images | filter: imgSearch" ">
         <!--Images Go HERE!!!-->
-        <!--Angular Controler-->
+        <img ng-src="{{imgUrl}}{{imgName}}" class="image-zone">
+
+
         </div>
     </div>
 </div>
