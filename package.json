@@ -1,0 +1,17 @@
+{
+  "name": "angular-image-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "Angular and Socket.io"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mustache": "^2.3.0",
+    "socket.io": "^1.7.2"
+  }
+}

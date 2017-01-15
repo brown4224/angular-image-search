@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular and Socket.io</title>
+
+    <!--Scripts .css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--Scripts .js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="./js/factories.js"></script>
+    <script src="./js/socketFunctions.js"></script>
+    <script src="./js/controller.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="image-area">
+<div class="container">
+    <input ng-model="imgSearch" class="form-control" placeholder="Image Search">
+    <div class="jumbotron" >
+        <div ng-repeat="img in images | filter: imgSearch" ">
+        <img ng-src="http://localhost:3000/images/{{img}}" class="image-zone">
+        <!--Images Go HERE!!!-->
+        <!--Angular Controler-->
+        </div>
+    </div>
+</div>
+</body>
+</html>
